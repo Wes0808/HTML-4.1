@@ -1,3 +1,7 @@
 * {
     color: red;
 }
+
+#personal-logo {
+    filter: invert(1);
+}
