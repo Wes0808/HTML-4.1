@@ -27,6 +27,29 @@ section {
     background-color: rgb(245, 245, 245);
 }
 
+input, textarea {
+    width: 100%;
+    background-color: #242424;
+    color: whitesmoke;
+    outline: none;
+    border: 3px solid #c0c4cc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 40px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 8px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .container {
     padding: 50px 0;
     width: 100%;
@@ -240,13 +263,13 @@ MODAL
 .modal__half {
     width: 50%;
     padding: 40px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .modal__about {
     background-color: rgb(245, 245, 245);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .modal__languages {
@@ -295,11 +318,16 @@ MODAL
 
 .modal__sub-title {
     margin: 12px 0 24px 0;
+    font-size: 14px;
 }
 
 .modal__para {
     margin-bottom: 12px;
     line-height: 1.75;
+}
+
+.form__item {
+    margin-bottom: 20px;
 }
 
 /*
