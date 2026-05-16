@@ -4,5 +4,21 @@
 
 function contact(event) {
     event.preventDefault();
-    console.log('It Worked');
-}
+        const loading = document.querySelector('.modal__overlay--loading')
+        const success = document.querySelector('.modal__overlay--success')
+        loading.classList += " modal__overlay--visible";
+    emailjs
+        .sendform(
+            'service_zotygp9',
+             'template_17q0da4',
+             event.target,
+             'MCjPEhF1uQPmKkpIg'
+        ).then(() => {
+            loading.classList.remove("modal__overlay--visible");
+            success.classList += " modal__overlay--visible";
+        }).catch(() => {
+            loading.classList.remove("modal__overlay--visible");
+            alert("The Email Service is Temporarily Unavailable Please contact me directly on email"
+            );
+        })
+} 
