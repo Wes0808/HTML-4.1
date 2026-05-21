@@ -28,21 +28,21 @@
           <img id="personal-logo" src="./assets/WB Logo.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" >
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >About</a
             >
           </li>
-          <li class="nav__link" onclick="toggleModal()">
+          <li class="nav__link" >
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -130,15 +130,15 @@
           <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input class="input" name="user_name" type="text" ></input>
+              <input class="input" name="user_name" type="text" required ></input>
             </div>
             <div class="form__item">
               <label class="form__item--label" >Email</label>
-              <input class="input" name="user_email" type="email" ></input>
+              <input class="input" name="user_email" type="email" required ></input>
             </div>
             <div class="form__item">
               <label class="form__item--label" >Message</label>
-              <textarea class="input" name="message" type="text" ></textarea>
+              <textarea class="input" name="message" type="text" required ></textarea>
             </div>
             <button id="contact__submit" class="form__submit">
               Send it my way
@@ -151,7 +151,7 @@
             Thanks for the message. Looking forward to speaking with you soon.
           </div>
         </div>
-        <i class="fas fa-times modal__exit click" onclick="closeContact()"></i>
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
       </div>
     </section>
     <section id="projects">
