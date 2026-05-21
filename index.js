@@ -8,7 +8,7 @@ function contact(event) {
         const success = document.querySelector('.modal__overlay--success')
         loading.classList += " modal__overlay--visible";
     emailjs
-        .sendform(
+        .sendForm(
             'service_zotygp9',
              'template_17q0da4',
              event.target,
@@ -22,3 +22,13 @@ function contact(event) {
             );
         })
 } 
+let isModalOpen = false;
+function toggleModal() {
+    /*isModalOpen = !isModalOpen;*/
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open");
+    }
+    isModalOpen = true;
+    document.body.classList += " modal--open";
+}
