@@ -153,15 +153,23 @@ nav,
     background-color: #242424;
 }
 
-.light-theme #personal-logo,
+.light-theme #personal-logo
+/*.light-theme .footer__logo--img*/ {
+    filter: invert(-1);
+}
+
 .light-theme .footer__logo--img {
     filter: invert(1);
 }
 
-.dark-theme #personal-logo,
 .dark-theme .footer__logo--img {
-    filter: none;
+    filter: invert(1);
 }
+
+.dark-theme #personal-logo
+/*.dark-theme .footer__logo--img*/ {
+    filter: invert(1);
+}*/
 
 .dark-theme .scroll__icon {
     border-color: whitesmoke;
