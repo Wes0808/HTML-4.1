@@ -8,10 +8,12 @@ let contrastToggle = false;
 function toggleContrast(){
     contrastToggle = !contrastToggle;
     if (contrastToggle) {
-        document.body.classlist += " dark-theme";
+        document.body.classList.add(" light-theme");
+        document.body.classList.remove(" dark-theme");
     }
     else {
-        document.body.classlist.remove(" dark-theme");
+        document.body.classList.add(" dark-theme");
+        document.body.classList.remove(" light-theme");
     }
 }
 
