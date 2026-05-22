@@ -2,6 +2,19 @@
 // service_zotygp9
 // MCjPEhF1uQPmKkpIg
 
+let isModalOpen = false;
+let contrastToggle = false;
+
+function toggleContrast(){
+    contrastToggle = !contrastToggle;
+    if (contrastToggle) {
+        document.body.classlist += " dark-theme";
+    }
+    else {
+        document.body.classlist.remove(" dark-theme");
+    }
+}
+
 function contact(event) {
     event.preventDefault();
         const loading = document.querySelector('.modal__overlay--loading')
@@ -22,7 +35,7 @@ function contact(event) {
             );
         })
 } 
-let isModalOpen = false;
+
 function toggleModal() {
     /*isModalOpen = !isModalOpen;*/
     if (isModalOpen) {
