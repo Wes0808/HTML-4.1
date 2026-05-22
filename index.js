@@ -14,7 +14,8 @@ function moveBackground(event) {
     for ( i = 0; i < shapes.length; ++i) {
         const isOdd = 1 % 2 !== 0;
         const boolInt = isOdd ? -1 : 1;
-        shapes[i].style.transform = `translate (${x * boolInt}px, ${y * boolInt}px)`;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) 
+        rotate(${x * boolInt * 10}deg)`;
     }
 
 }
